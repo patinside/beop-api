@@ -6,7 +6,6 @@
         ring/ring-jetty-adapter {:mvn/version "1.9.1"},
         datalevin/datalevin {:mvn/version "0.6.9"},
         compojure/compojure {:mvn/version "1.6.1"},
-        org.xerial/sqlite-jdbc {:mvn/version "3.23.1"},
         org.clojure/java.jdbc {:mvn/version "0.7.8"}}
- :aliases {:run {:exec-fn api-beop.core/-main}}
- :dev {:extra-paths ["dev"]}}
+ :aliases {:run {:exec-fn api-beop.core/-main}
+           :dev {:extra-paths ["dev"]}}}
