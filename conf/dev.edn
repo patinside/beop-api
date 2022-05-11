@@ -1,0 +1,4 @@
+{:webserver
+ {:port 3000 :join? false}
+ :db
+ {:path "db/kvdb"}}
