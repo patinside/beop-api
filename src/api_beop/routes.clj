@@ -7,7 +7,7 @@
 
 (defroutes routes
            (GET "/question-data" request (json/encode (domain/make-question-data-resp request)))
-           (POST "/count-clic" request (json/encode (domain/manage-widget-clic request)))
+           (POST "/count-click" request (json/encode (domain/manage-widget-click request)))
            (GET "/advert-campaign-status" request (json/encode (domain/make-advert-status request))))
 
 (defn- wrap-with-dep [f deps]

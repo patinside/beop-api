@@ -10,11 +10,11 @@
   [{:keys [advert-id]}]
   (get data (keyword advert-id)))
 
-(defn- make-question-data-resp
+(defn make-question-data-resp
   [{:keys [params] :as _req}]
   {:body (get-question-data params)})
 
-(defn- manage-widget-clic
+(defn manage-widget-click
   [{:keys [components params]}]
   (let [db (-> components :db :instance)
         {:keys [advert-id vote-id]} params
@@ -24,7 +24,7 @@
      :transaction-status inc-vote
      :params params}))
 
-(defn- make-advert-status
+(defn make-advert-status
   [{:keys [components params]}]
   (let [{:keys [advert-id]} params
         db (-> components :db :instance)
