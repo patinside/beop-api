@@ -5,7 +5,7 @@
   (:gen-class))
 
 (defn -main
-  []
+  [&args]
   (let [conf (edn/read-string (slurp "conf/prod.edn"))
         system (system/make-system conf)]
     (component/start system)))

@@ -1,12 +1,6 @@
 (ns api-beop.services.kv-store
   (:require [datalevin.core :as d]))
 
-(def kv-db (d/open-kv "db/mykvdb"))
-
-(defn- open-table
-  [db table]
-  (d/open-dbi db table))
-
 (defn make-id
   [advert-id vote-id]
   (keyword(str (name advert-id) "." (name vote-id))))

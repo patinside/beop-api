@@ -22,7 +22,6 @@ I used way to manage component as recommended in this [book](https://grishaev.me
 ## Configuration
 Port can be configure in the `conf/dev.edn` or `conf/dev.edn` file.
 
-
 ## Routes usage
 
 All routes return a JSON structure.
@@ -93,4 +92,4 @@ Example: http://localhost:3000/advert-campaign-status?advert-id=1
 - Add the adverts data in a database
 - Manage exceptions for DB
 - Manage exceptions for webserver
-- improve organization (routes namespace is not nice)
+- Improve organization (routes namespace is not nice)
