@@ -1,7 +1,7 @@
 (ns api-beop.components.webserver
   (:require [com.stuartsierra.component :as component]
             [ring.adapter.jetty :as jetty]
-            [api-beop.core :refer [app]]))
+            [api-beop.routes :refer [app]]))
 
 (defrecord WebServer [http-server config db]
   component/Lifecycle

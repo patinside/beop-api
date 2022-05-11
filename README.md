@@ -9,14 +9,19 @@ Counter status are stored in a [Datalevin](https://github.com/juji-io/datalevin)
 Data are stored with a transaction process.
 
 ## Application start
+I used way to manage component as recommended in this [book](https://grishaev.me/en/clj-book-systems/)
 
-For the moment, the application only starts in a repl:
-
+### In the repl:
 - (user/go) to start the system
 - (user/reset) to restart the system
 - (user/stop) to stop it.
 
-I used way to manage component as recommended in this [book](https://grishaev.me/en/clj-book-systems/)
+### With clj:
+``` clj -X:run```
+
+## Configuration
+Port can be configure in the `conf/dev.edn` or `conf/dev.edn` file.
+
 
 ## Routes usage
 
@@ -83,11 +88,9 @@ Example: http://localhost:3000/advert-campaign-status?advert-id=1
 
 ## TODO
 
-- Make production startup
-- Move from leiningen to deps
-- Check the validity of the option sent by the client with spec
+- Check the validity of the options sent by the client with spec
 - Make some tests
 - Add the adverts data in a database
-- Manage exception for DB
-- Manage exception for webserver
-- imporove organization (create a routes namespace, create )
+- Manage exceptions for DB
+- Manage exceptions for webserver
+- improve organization (routes namespace is not nice)
